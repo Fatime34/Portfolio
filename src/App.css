@@ -15,6 +15,10 @@
 
 
 /* Navbarin kodlari */
+nav {
+    z-index: 2;
+}
+
 nav ul {
     overflow: hidden;
 }
@@ -38,7 +42,7 @@ nav ul li {
 .navbar-nav > a.active,
 .navbar-nav > a:hover,
 .navbar-nav > a:focus {
-    border-top: var(--primary-orange);
+    border-top: var(--primary-orange)!important;
 }
 
 /* Header ucun kodlar */
@@ -97,4 +101,37 @@ nav ul li {
     background-color: var(--primary-hover-red);
     color: var(--primary-white);
     transition: .4s ease-in-out;
+}
+
+
+/* About me componenti ucun stiller */
+
+.photo-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-img {
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;
+    border: 1px solid var(--primary-orange);
+    padding: .3rem;
+    object-fit: cover;
+}
+
+.about-heading {
+    color: var(--primary-orange);
+    text-transform: uppercase;
+}
+
+@media(max-width:768px) {
+    .about-heading {
+        text-align: center;
+        margin-bottom:20px;
+    }
+    .typed-text {
+        text-align: justify;
+    }
 }
